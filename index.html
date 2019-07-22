@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Deng,Xi</title>
+
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-grid.min.css" rel="stylesheet">
+        <link href="css/academicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+        <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="js/jquery.cycle2.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+        <script src="js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav id="myNavBar" class="navbar navbar-default navbar-fixed-top navbar-expand-lg navbar-dark bg-red">
+                <a class="navbar-brand" href="#"><span><h2>Xi Deng</h2></span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- <div class="collapse navbar-collapse " id="navbarNavAltMarkup"> -->
+                <div class="collapse navbar-collapse top-navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a class="nav-item nav-link" href="#">Publications</a></li>
+                            <li><a class="nav-item nav-link" href="#">Projects</a></li>
+                            <li><a class="nav-item nav-link" href="#">Arts</a></li>
+                            <li><a class="nav-item nav-link" href="#">Contacts</a></li>
+                            <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                        </ul>
+                </div>
+                </div>
+        </nav>
+        <!-- Introduction -->
+        <div class="container-fluid" style="padding-top: 2rem; margin-left: 0rem; margin-right: 0rem; padding-right: 2rem;">
+            <div class="card" style="padding: 0.5rem;">
+             <div class="row" >
+                  <div class="col-xs-12 col-ms-6 col-md-4 col-lg-4" >
+                        <div class="text-center center-block cycle-slideshow" style="margin: 1rem;">
+                                <div class="cycle-overlay text-center center-block small"><img src="img/Deng5.jpg" class="card-img-top" alt="Xi Deng's Photo">
+                                </div>
+                        </div>
+                  </div>
+                  <div class="col-xs-24 col-ms-12 col-md-8 col-lg-8">
+                      <div class="container">
+                      <p style="margin: 0.5rem;text-align: justify;">
+                     First year Ph.D student at Cornell University. My research interest focus in Light Transport Simulation, Reverse Rendering and Volume Rendering.</br>
+                     Before I started my Ph.D at Cornell in the June of 2019, I worked in <a href="http://vcl.cs.dartmouth.edu/" style="color:#c01b1b">Visual Computing Lab<a>
+                    at Dartmouth College under the supervision of <a href="https://cs.dartmouth.edu/~wjarosz/" style="color:#c01b1b">Dr. Wojciech Jarosz</a>.
+                     </p></div>
+                  </div>
+             </div>
+            </div>
+            <!-- Content -->
+            <div class="container-fluid" style="padding: 0.5rem">
+                <h3 id="Publications"> Publications </h3>
+                <div class="panel panel-default">
+                    <ul class="list-group publications">
+                        <li class="list-group-item publication">
+                            <div class="publication-title">
+                                <a href="https://cs.dartmouth.edu/~wjarosz/publications/deng19photon.html" style="color:#c01b1b;font-size:20px">Photon surfaces for robust, unbiased volumetric density estimation</a>
+                            </div>
+                            <div>Xi Deng, Shaojie Jiao, Benedikt Bitterli, Wojciech Jarosz.</div>
+                            <div><em>ACM Transactions on Graphics (Proceedings of <b>SIGGRAPH</b>)</em>, 38(4), July 2019.</div>
+                               <ul class="list-inline small" role="group">
+                                    <!-- <li><i class="fa fa-fw fa-globe"></i>&nbsp;<a href="#">project page</a></li> -->
+                                    <li><i class="fa fa-fw fa-file-pdf-o"></i>&nbsp;<a href="publications/deng19photon.pdf">paper (46MB pdf)</a></li>
+                                    <li><i class="ai ai-fw ai-doi"></i>&nbsp;<a href="http://dx.doi.org/10.1145/3306346.3323041">publisher's version</a></li>
+                                    <li><i class="fa fa-fw fa-quote-left"></i>&nbsp;<a data-toggle="collapse" href="#deng19photon-bib-collapse-recent" >cite (bib)</a></li>
+                                </ul>
+                            <!-- <div class="abstract">
+                                <b>Abstract: </b>
+                               We generalize photon planes to <i>photon surfaces</i>: a new family of unbiased volumetric density estimators which we combine using multiple importance sampling. To derive our new estimators, we start with the extended path integral which duplicates the vertex at the end of the camera and photon subpaths and couples them using a blurring kernel. To make our formulation unbiased, however, we use a delta kernel to couple these two end points. Unfortunately, sampling the resulting singular integral using Monte Carlo is impossible since the probability of generating a contributing light path by independently sampling the two subpaths is zero. Our key insight is that we can eliminate the delta kernel and make Monte Carlo estimation practical by integrating any three dimensions analytically, and integrating only the remaining dimensions using Monte Carlo. We demonstrate the practicality of this approach by instantiating a collection of estimators which analytically integrate the distance along the camera ray and two arbitrary sampling dimensions along the photon subpath (e.g., distance, direction, surface area). This generalizes photon planes to curved “photon surfaces”, including new “photon cone”, “photon cylinder”, “photon sphere”, and multiple new “photon plane” estimators. These estimators allow us to handle light paths not supported by photon planes, including single scattering, and surface-to-media transport. More importantly, since our estimators have complementary strengths due to analytically integrating different dimensions of the path integral, we can combine them using multiple importance sampling. This combination mitigates singularities present in individual estimators, substantially reducing variance while remaining fully unbiased. We demonstrate our improved estimators on a number of scenes containing homogeneous media with highly anisotropic phase functions, accelerating both multiple scattering and single scattering compared to prior techniques.  
+                            <div> -->
+                            <div class="collapse" id="deng19photon-bib-collapse-recent">
+                                <div class="well well-sm" style="margin: 1ex 0 0.5ex 0;">
+                                <small>
+                                    <pre>@article{deng19photon,
+    author = "Deng, Xi and Jiao, Shaojie and Bitterli, Benedikt and Jarosz, Wojciech",
+    title = "Photon surfaces for robust, unbiased volumetric density estimation",
+    journal = "ACM Transactions on Graphics (Proceedings of SIGGRAPH)",
+    volume = "38",
+    number = "4",
+    year = "2019",
+    month = "jul",
+    doi = "10.1145/3306346.3323041",
+    keywords = "photon beams, photon mapping, participating media, multiple importance sampling, MIS",
+    abstract = "We generalize photon planes to <i>photon surfaces</i>: a new family of unbiased volumetric density estimators which we combine using multiple importance sampling. To derive our new estimators, we start with the extended path integral which duplicates the vertex at the end of the camera and photon subpaths and couples them using a blurring kernel. To make our formulation unbiased, however, we use a delta kernel to couple these two end points. Unfortunately, sampling the resulting singular integral using Monte Carlo is impossible since the probability of generating a contributing light path by independently sampling the two subpaths is zero. Our key insight is that we can eliminate the delta kernel and make Monte Carlo estimation practical by integrating any three dimensions analytically, and integrating only the remaining dimensions using Monte Carlo. We demonstrate the practicality of this approach by instantiating a collection of estimators which analytically integrate the distance along the camera ray and two arbitrary sampling dimensions along the photon subpath (e.g., distance, direction, surface area). This generalizes photon planes to curved “photon surfaces”, including new “photon cone”, “photon cylinder”, “photon sphere”, and multiple new “photon plane” estimators. These estimators allow us to handle light paths not supported by photon planes, including single scattering, and surface-to-media transport. More importantly, since our estimators have complementary strengths due to analytically integrating different dimensions of the path integral, we can combine them using multiple importance sampling. This combination mitigates singularities present in individual estimators, substantially reducing variance while remaining fully unbiased. We demonstrate our improved estimators on a number of scenes containing homogeneous media with highly anisotropic phase functions, accelerating both multiple scattering and single scattering compared to prior techniques."
+}
+                                    </pre>
+                                </small>
+                            </div>
+                            </div>
+                        </li>
+                     </ul>   
+                </div>
+                <h3 id="Projects"> Projects </h3>
+            <div>
+        </div>
+    </body>
+</html>
